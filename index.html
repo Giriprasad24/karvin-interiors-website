@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Karvin Interiors | Interior Design & Execution</title>
@@ -44,7 +42,6 @@
             position: fixed;
             top: 0;
             left: 0;
-
             width: 100%;
             height: 100px;
 
@@ -102,7 +99,6 @@
             color: #222;
 
             font-size: 18px;
-
             font-weight: 600;
 
             transition: 0.3s;
@@ -122,7 +118,6 @@
             display: none;
 
             background: none;
-
             border: none;
 
             font-size: 32px;
@@ -140,9 +135,7 @@
         ========================= */
 
         .hero {
-
             height: 100vh;
-
             min-height: 650px;
 
             margin-top: 100px;
@@ -155,11 +148,9 @@
                 url("images/Picture10.jpg");
 
             background-size: cover;
-
             background-position: center;
 
             display: flex;
-
             align-items: center;
 
             padding: 0 7%;
@@ -173,10 +164,7 @@
         }
 
 
-        /* CORMORANT GARAMOND */
-
         .hero h1 {
-
             font-family: 'Cormorant Garamond', Georgia, serif;
 
             font-size: clamp(55px, 8vw, 110px);
@@ -192,7 +180,6 @@
 
 
         .hero h2 {
-
             font-size: 32px;
 
             font-weight: 400;
@@ -202,7 +189,6 @@
 
 
         .hero p {
-
             font-size: 21px;
 
             line-height: 1.6;
@@ -218,7 +204,6 @@
         ========================= */
 
         .button {
-
             display: inline-block;
 
             padding: 17px 32px;
@@ -245,7 +230,6 @@
 
 
         .button-light {
-
             background: white;
 
             color: #222;
@@ -262,12 +246,20 @@
         ========================= */
 
         section {
+
             padding: 90px 7%;
+
+            /*
+             IMPORTANT:
+             Keeps headings below the fixed header
+             when navigation links are clicked.
+            */
+
+            scroll-margin-top: 115px;
         }
 
 
         .section-title {
-
             text-align: center;
 
             font-size: 42px;
@@ -284,7 +276,6 @@
 
 
         .section-intro {
-
             text-align: center;
 
             max-width: 750px;
@@ -304,17 +295,17 @@
         ========================= */
 
         .clients {
-
             background: #fff;
 
             text-align: center;
 
             padding: 80px 4%;
+
+            scroll-margin-top: 115px;
         }
 
 
         .clients-image {
-
             max-width: 1500px;
 
             margin: 0 auto;
@@ -322,7 +313,6 @@
 
 
         .clients-image img {
-
             width: 100%;
 
             height: auto;
@@ -336,13 +326,11 @@
         ========================= */
 
         .about {
-
             background: #f7f7f7;
         }
 
 
         .about-container {
-
             max-width: 1100px;
 
             margin: auto;
@@ -358,7 +346,6 @@
 
 
         .about-image img {
-
             width: 100%;
 
             height: 500px;
@@ -368,7 +355,6 @@
 
 
         .about-text h3 {
-
             font-size: 32px;
 
             margin-bottom: 20px;
@@ -376,7 +362,6 @@
 
 
         .about-text p {
-
             font-size: 17px;
 
             line-height: 1.8;
@@ -392,7 +377,6 @@
         ========================= */
 
         .services-grid {
-
             max-width: 1200px;
 
             margin: auto;
@@ -406,7 +390,6 @@
 
 
         .service-card {
-
             padding: 40px 30px;
 
             background: #f7f7f7;
@@ -420,7 +403,6 @@
 
 
         .service-card:hover {
-
             transform: translateY(-7px);
 
             box-shadow:
@@ -429,7 +411,6 @@
 
 
         .service-card h3 {
-
             font-size: 24px;
 
             margin-bottom: 15px;
@@ -437,7 +418,6 @@
 
 
         .service-card p {
-
             color: #666;
 
             line-height: 1.7;
@@ -449,13 +429,11 @@
         ========================= */
 
         .projects {
-
             background: #f7f7f7;
         }
 
 
         .projects-grid {
-
             max-width: 1300px;
 
             margin: auto;
@@ -469,7 +447,6 @@
 
 
         .project {
-
             height: 300px;
 
             overflow: hidden;
@@ -479,7 +456,6 @@
 
 
         .project img {
-
             width: 100%;
 
             height: 100%;
@@ -491,7 +467,6 @@
 
 
         .project:hover img {
-
             transform: scale(1.08);
         }
 
@@ -501,13 +476,11 @@
         ========================= */
 
         .contact {
-
             text-align: center;
         }
 
 
         .contact-box {
-
             max-width: 800px;
 
             margin: auto;
@@ -515,13 +488,11 @@
 
 
         .contact .section-title {
-
             white-space: nowrap;
         }
 
 
         .contact-box h3 {
-
             font-size: 30px;
 
             margin-bottom: 20px;
@@ -529,7 +500,6 @@
 
 
         .contact-box p {
-
             font-size: 18px;
 
             color: #666;
@@ -543,7 +513,6 @@
         ========================= */
 
         footer {
-
             background: #222;
 
             color: white;
@@ -584,10 +553,7 @@
             }
 
 
-            /* Hide normal navigation */
-
             nav {
-
                 display: none;
 
                 position: absolute;
@@ -611,15 +577,12 @@
             }
 
 
-            /* Show menu */
-
             nav.active {
                 display: flex;
             }
 
 
             nav a {
-
                 width: 100%;
 
                 text-align: center;
@@ -638,7 +601,6 @@
 
 
             .hero {
-
                 margin-top: 85px;
 
                 padding: 0 6%;
@@ -646,7 +608,6 @@
 
 
             .hero h1 {
-
                 font-family: 'Cormorant Garamond', Georgia, serif;
 
                 font-size: 60px;
@@ -666,20 +627,29 @@
 
 
             .about-container {
-
                 grid-template-columns: 1fr;
             }
 
 
             .services-grid {
-
                 grid-template-columns: 1fr;
             }
 
 
             .projects-grid {
-
                 grid-template-columns: 1fr 1fr;
+            }
+
+
+            /* FIX SECTION HEADINGS */
+
+            section {
+                scroll-margin-top: 100px;
+            }
+
+
+            .clients {
+                scroll-margin-top: 100px;
             }
 
         }
@@ -692,7 +662,6 @@
         @media (max-width: 600px) {
 
             header {
-
                 height: 75px;
 
                 padding: 0 15px;
@@ -700,13 +669,11 @@
 
 
             .logo-container {
-
                 margin-left: 0;
             }
 
 
             .logo {
-
                 height: 68px;
 
                 max-width: 220px;
@@ -714,7 +681,6 @@
 
 
             .menu-button {
-
                 display: block;
 
                 font-size: 30px;
@@ -722,13 +688,11 @@
 
 
             nav {
-
                 top: 75px;
             }
 
 
             nav a {
-
                 font-size: 16px;
 
                 padding: 17px 10px;
@@ -736,7 +700,6 @@
 
 
             .hero {
-
                 margin-top: 75px;
 
                 min-height: 600px;
@@ -746,7 +709,6 @@
 
 
             .hero h1 {
-
                 font-family: 'Cormorant Garamond', Georgia, serif;
 
                 font-size: 48px;
@@ -756,63 +718,71 @@
 
 
             .hero h2 {
-
                 font-size: 22px;
             }
 
 
             .hero p {
-
                 font-size: 16px;
             }
 
 
             .button {
-
                 padding: 13px 20px;
 
                 font-size: 14px;
             }
 
 
-            section {
+            /* =========================
+               IMPORTANT HEADING FIX
+            ========================= */
 
+            section {
                 padding: 65px 6%;
+
+                /*
+                 Header is 75px tall.
+                 This gives the heading enough
+                 space below the navbar.
+                */
+
+                scroll-margin-top: 90px;
             }
 
 
             .section-title {
-
                 font-size: 32px;
+
+                line-height: 1.2;
+
+                margin-bottom: 20px;
             }
 
 
             .clients {
-
                 padding: 60px 3%;
+
+                scroll-margin-top: 90px;
             }
 
 
             .clients-image img {
-
                 width: 100%;
             }
 
 
             .about-image img {
-
                 height: 350px;
             }
 
 
             .projects-grid {
-
                 grid-template-columns: 1fr;
             }
 
 
             .project {
-
                 height: 280px;
             }
 
@@ -820,7 +790,6 @@
             /* CONTACT TITLE STAYS ON ONE LINE */
 
             .contact .section-title {
-
                 font-size: 25px;
 
                 white-space: nowrap;
@@ -832,13 +801,11 @@
 
 
             .contact-box h3 {
-
                 font-size: 24px;
             }
 
 
             .contact-box p {
-
                 font-size: 16px;
             }
 
@@ -1060,6 +1027,7 @@
             </div>
 
 
+
             <div class="service-card">
 
                 <h3>
@@ -1072,6 +1040,7 @@
                 </p>
 
             </div>
+
 
 
             <div class="service-card">
@@ -1088,6 +1057,7 @@
             </div>
 
 
+
             <div class="service-card">
 
                 <h3>
@@ -1102,6 +1072,7 @@
             </div>
 
 
+
             <div class="service-card">
 
                 <h3>
@@ -1114,6 +1085,7 @@
                 </p>
 
             </div>
+
 
 
             <div class="service-card">
