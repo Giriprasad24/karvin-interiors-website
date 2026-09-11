@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <title>Karvin Interiors | Interior Design & Execution</title>
 
     <meta name="description"
-        content="Karvin Interiors - Interior design and execution for corporate offices, IT parks, hotels, banks, hospitals, retail spaces and residences.">
+        content="Karvin Interiors - Interior design, execution, modular furniture and professional interior solutions.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -23,60 +25,72 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             color: #222;
-            background: #ffffff;
+            background: #fff;
             line-height: 1.6;
         }
 
-        /* NAVIGATION */
+        /* ================= NAVBAR ================= */
 
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            height: 82px;
+
             background: rgba(255,255,255,0.97);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 10px 6%;
+
             z-index: 1000;
+
             box-shadow: 0 2px 15px rgba(0,0,0,0.08);
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            color: #7d1828;
+            height: 62px;
+            width: auto;
+            object-fit: contain;
         }
 
         nav ul {
             display: flex;
-            gap: 30px;
             list-style: none;
+            gap: 30px;
         }
 
-        nav a {
-            color: #222;
+        nav ul li a {
             text-decoration: none;
-            font-size: 15px;
+            color: #222;
             font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
         }
 
-        nav a:hover {
-            color: #7d1828;
+        nav ul li a:hover {
+            color: #8b1728;
         }
 
-        /* HERO */
+
+        /* ================= HERO ================= */
 
         .hero {
             min-height: 100vh;
+
             display: flex;
             align-items: center;
-            padding: 140px 7% 80px;
+
+            padding: 130px 7% 80px;
 
             background:
-                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                linear-gradient(
+                    rgba(0,0,0,0.60),
+                    rgba(0,0,0,0.60)
+                ),
                 url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=85")
                 center/cover no-repeat;
 
@@ -90,36 +104,41 @@
         .hero h1 {
             font-size: clamp(48px, 7vw, 90px);
             line-height: 1;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             margin-bottom: 25px;
         }
 
         .hero h2 {
-            font-size: clamp(22px, 3vw, 36px);
+            font-size: clamp(22px, 3vw, 34px);
             font-weight: 400;
             margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 19px;
             max-width: 650px;
-            margin-bottom: 35px;
-            color: #eeeeee;
+            font-size: 19px;
+            color: #eee;
+            margin-bottom: 32px;
         }
 
         .button {
             display: inline-block;
+
             padding: 14px 28px;
-            background: #7d1828;
+
+            background: #8b1728;
             color: white;
+
             text-decoration: none;
             font-weight: bold;
+
             margin-right: 10px;
+
             transition: 0.3s;
         }
 
         .button:hover {
-            background: #5e101d;
+            background: #68101d;
         }
 
         .button-light {
@@ -128,24 +147,25 @@
         }
 
         .button-light:hover {
-            background: #eeeeee;
+            background: #eee;
         }
 
-        /* GENERAL SECTIONS */
+
+        /* ================= SECTIONS ================= */
 
         section {
             padding: 100px 7%;
         }
 
         .section-heading {
-            text-align: center;
             max-width: 800px;
             margin: 0 auto 60px;
+            text-align: center;
         }
 
         .section-heading h2 {
+            color: #8b1728;
             font-size: 42px;
-            color: #7d1828;
             margin-bottom: 15px;
         }
 
@@ -154,46 +174,56 @@
             font-size: 17px;
         }
 
-        /* ABOUT */
+
+        /* ================= ABOUT ================= */
 
         .about {
             display: grid;
             grid-template-columns: 1fr 1fr;
+
             gap: 70px;
+
             align-items: center;
         }
 
         .about-image {
             width: 100%;
             height: 500px;
+
             object-fit: cover;
         }
 
         .about-content h2 {
+            color: #8b1728;
             font-size: 42px;
-            color: #7d1828;
+
             margin-bottom: 20px;
         }
 
         .about-content p {
             color: #555;
-            margin-bottom: 18px;
             font-size: 17px;
+
+            margin-bottom: 18px;
         }
 
         .experience {
             margin-top: 25px;
+
             padding: 25px;
-            border-left: 4px solid #7d1828;
-            background: #f7f7f7;
+
+            background: #f6f6f6;
+
+            border-left: 4px solid #8b1728;
         }
 
         .experience strong {
+            color: #8b1728;
             font-size: 28px;
-            color: #7d1828;
         }
 
-        /* SERVICES */
+
+        /* ================= SERVICES ================= */
 
         .services {
             background: #f6f6f6;
@@ -201,55 +231,76 @@
 
         .service-grid {
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
+
             gap: 22px;
         }
 
         .service-card {
             background: white;
+
             padding: 35px 25px;
+
             min-height: 220px;
-            border-top: 4px solid #7d1828;
+
+            border-top: 4px solid #8b1728;
+
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
         }
 
         .service-card h3 {
-            font-size: 22px;
+            font-size: 21px;
             margin-bottom: 15px;
-            color: #222;
         }
 
         .service-card p {
             color: #666;
         }
 
-        /* INDUSTRIES */
+
+        /* ================= INDUSTRIES ================= */
 
         .industry-grid {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 20px;
         }
 
         .industry {
             min-height: 130px;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f4f4f4;
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
+
+            background: #f5f5f5;
+
             padding: 20px;
+
+            font-size: 19px;
+            font-weight: bold;
+
+            text-align: center;
+
             transition: 0.3s;
         }
 
         .industry:hover {
-            background: #7d1828;
+            background: #8b1728;
             color: white;
         }
 
-        /* PROJECTS */
+
+        /* ================= PROJECTS ================= */
 
         .projects {
             background: #151515;
@@ -261,48 +312,59 @@
         }
 
         .projects .section-heading p {
-            color: #cccccc;
+            color: #ccc;
         }
 
         .project-grid {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 18px;
         }
 
         .project {
-            overflow: hidden;
             height: 300px;
+            overflow: hidden;
         }
 
         .project img {
             width: 100%;
             height: 100%;
+
             object-fit: cover;
+
             transition: transform 0.5s;
         }
 
         .project:hover img {
-            transform: scale(1.05);
+            transform: scale(1.06);
         }
 
-        /* FACILITIES */
+
+        /* ================= CAPABILITIES ================= */
 
         .facility-grid {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 25px;
         }
 
         .facility {
             padding: 40px;
+
             background: #f6f6f6;
-            border-left: 4px solid #7d1828;
+
+            border-left: 4px solid #8b1728;
         }
 
         .facility h3 {
-            color: #7d1828;
-            font-size: 25px;
+            color: #8b1728;
+
+            font-size: 24px;
+
             margin-bottom: 12px;
         }
 
@@ -310,57 +372,73 @@
             color: #555;
         }
 
-        /* CONTACT */
+
+        /* ================= CONTACT ================= */
 
         .contact {
-            background: #7d1828;
+            background: #8b1728;
+
             color: white;
+
             text-align: center;
         }
 
         .contact h2 {
             font-size: 45px;
+
             margin-bottom: 15px;
         }
 
         .contact p {
             font-size: 18px;
+
             margin-bottom: 8px;
         }
 
         .contact .button {
             background: white;
-            color: #7d1828;
+            color: #8b1728;
+
             margin-top: 25px;
         }
 
-        /* FOOTER */
+
+        /* ================= FOOTER ================= */
 
         footer {
             background: #111;
+
             color: white;
+
             text-align: center;
+
             padding: 30px 20px;
         }
 
         footer p {
-            margin: 5px;
             color: #aaa;
+
+            margin: 5px;
         }
 
-        /* MOBILE */
+
+        /* ================= MOBILE ================= */
 
         @media (max-width: 900px) {
 
             nav {
-                padding: 16px 5%;
+                padding: 10px 4%;
+            }
+
+            .logo {
+                height: 52px;
             }
 
             nav ul {
                 gap: 15px;
             }
 
-            nav a {
+            nav ul li a {
                 font-size: 13px;
             }
 
@@ -385,24 +463,40 @@
             }
         }
 
+
         @media (max-width: 600px) {
 
             nav {
+                height: auto;
+
                 flex-direction: column;
-                gap: 10px;
+
+                gap: 8px;
+
+                padding: 8px;
+            }
+
+            .logo {
+                height: 48px;
             }
 
             nav ul {
                 flex-wrap: wrap;
                 justify-content: center;
+
+                gap: 12px;
             }
 
             .hero {
-                padding-top: 170px;
+                padding-top: 160px;
             }
 
             .hero h1 {
                 font-size: 50px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
             }
 
             .hero p {
@@ -423,39 +517,66 @@
                 padding: 70px 6%;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- ================= NAVIGATION ================= -->
 
     <nav>
 
-        <div class="logo">
-            KARVIN INTERIORS
-        </div>
+        <a href="#home">
+            <img
+                src="karvin-logo.jpg"
+                alt="Karvin Interiors Logo"
+                class="logo">
+        </a>
 
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#services">Services</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
         </ul>
 
     </nav>
 
 
-    <!-- HOME -->
+    <!-- ================= HOME ================= -->
 
     <section class="hero" id="home">
 
         <div class="hero-content">
 
-            <h1>KARVIN<br>INTERIORS</h1>
+            <h1>
+                KARVIN<br>
+                INTERIORS
+            </h1>
 
-            <h2>Creating spaces with purpose.</h2>
+            <h2>
+                Creating spaces with purpose.
+            </h2>
 
             <p>
                 Interior design and execution for professional,
@@ -475,7 +596,7 @@
     </section>
 
 
-    <!-- ABOUT -->
+    <!-- ================= ABOUT ================= -->
 
     <section id="about">
 
@@ -483,7 +604,9 @@
 
             <div class="about-content">
 
-                <h2>About Us</h2>
+                <h2>
+                    About Karvin Interiors
+                </h2>
 
                 <p>
                     The insightful vision of our leader, Mr. K. Prasanna,
@@ -500,18 +623,20 @@
                 </p>
 
                 <p>
-                    Over the years, our experience has extended across
-                    luxury hotels, IT parks, corporate offices, banks,
-                    hospitals, retail spaces and residences.
+                    Our experience extends across luxury hotels,
+                    IT parks, corporate offices, banks, hospitals,
+                    retail spaces and residences.
                 </p>
 
                 <div class="experience">
 
-                    <strong>Since 1985</strong>
+                    <strong>
+                        Since 1985
+                    </strong>
 
                     <p>
-                        Experience across a wide range of interior
-                        projects and environments.
+                        Decades of experience in interior projects
+                        and professional environments.
                     </p>
 
                 </div>
@@ -520,26 +645,28 @@
 
 
             <img
-                class="about-image"
                 src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
-                alt="Karvin Interiors modern interior">
+                alt="Modern interior"
+                class="about-image">
 
         </div>
 
     </section>
 
 
-    <!-- SERVICES -->
+    <!-- ================= SERVICES ================= -->
 
     <section class="services" id="services">
 
         <div class="section-heading">
 
-            <h2>Our Services</h2>
+            <h2>
+                Our Services
+            </h2>
 
             <p>
-                We provide comprehensive interior solutions supported
-                by experienced teams and in-house capabilities.
+                Comprehensive interior solutions supported by
+                experienced teams and in-house capabilities.
             </p>
 
         </div>
@@ -549,11 +676,13 @@
 
             <div class="service-card">
 
-                <h3>Interior Execution</h3>
+                <h3>
+                    Interior Execution
+                </h3>
 
                 <p>
-                    Execution of interior contracts with focus on
-                    quality standards and project schedules.
+                    Professional execution of interior contracts
+                    with focus on quality and project schedules.
                 </p>
 
             </div>
@@ -561,7 +690,9 @@
 
             <div class="service-card">
 
-                <h3>Design & Build</h3>
+                <h3>
+                    Design & Build
+                </h3>
 
                 <p>
                     Design-build fit-outs delivered through
@@ -573,10 +704,12 @@
 
             <div class="service-card">
 
-                <h3>Modular Furniture</h3>
+                <h3>
+                    Modular Furniture
+                </h3>
 
                 <p>
-                    Supply of in-house modular furniture for
+                    In-house modular furniture solutions for
                     professional workspaces and interiors.
                 </p>
 
@@ -585,11 +718,14 @@
 
             <div class="service-card">
 
-                <h3>Technical Services</h3>
+                <h3>
+                    Technical Services
+                </h3>
 
                 <p>
-                    HVAC, FAS, electrical and networking,
-                    public address, CCTV and access control.
+                    HVAC, fire alarm systems, electrical,
+                    networking, CCTV, access control and
+                    public address systems.
                 </p>
 
             </div>
@@ -599,17 +735,19 @@
     </section>
 
 
-    <!-- INDUSTRIES -->
+    <!-- ================= INDUSTRIES ================= -->
 
     <section>
 
         <div class="section-heading">
 
-            <h2>Industries</h2>
+            <h2>
+                Industries We Serve
+            </h2>
 
             <p>
-                Our experience includes projects across multiple
-                sectors and environments.
+                Experience across a wide range of commercial,
+                professional and residential environments.
             </p>
 
         </div>
@@ -638,7 +776,7 @@
             </div>
 
             <div class="industry">
-                Retail
+                Retail Spaces
             </div>
 
             <div class="industry">
@@ -658,17 +796,19 @@
     </section>
 
 
-    <!-- PROJECTS -->
+    <!-- ================= PROJECTS ================= -->
 
     <section class="projects" id="projects">
 
         <div class="section-heading">
 
-            <h2>Our Projects</h2>
+            <h2>
+                Our Projects
+            </h2>
 
             <p>
-                Explore a selection of interior environments
-                and spaces.
+                A selection of interior environments and
+                professional spaces.
             </p>
 
         </div>
@@ -677,39 +817,56 @@
         <div class="project-grid">
 
             <div class="project">
+
                 <img
                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85"
                     alt="Corporate office interior">
+
             </div>
 
+
             <div class="project">
+
                 <img
                     src="https://images.unsplash.com/photo-1497366811360-93d2f8f2f9f5?auto=format&fit=crop&w=1200&q=85"
                     alt="Modern office workspace">
+
             </div>
 
+
             <div class="project">
+
                 <img
                     src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?auto=format&fit=crop&w=1200&q=85"
                     alt="Office meeting room">
+
             </div>
 
+
             <div class="project">
+
                 <img
                     src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"
-                    alt="Modern interior space">
+                    alt="Modern interior">
+
             </div>
 
+
             <div class="project">
+
                 <img
                     src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85"
-                    alt="Corporate interior project">
+                    alt="Corporate interior">
+
             </div>
 
+
             <div class="project">
+
                 <img
                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85"
                     alt="Commercial workspace">
+
             </div>
 
         </div>
@@ -717,13 +874,15 @@
     </section>
 
 
-    <!-- FACILITIES -->
+    <!-- ================= CAPABILITIES ================= -->
 
     <section>
 
         <div class="section-heading">
 
-            <h2>Our Capabilities</h2>
+            <h2>
+                Our Capabilities
+            </h2>
 
             <p>
                 Infrastructure and resources supporting our
@@ -737,7 +896,9 @@
 
             <div class="facility">
 
-                <h3>6000 sq.ft Warehouse & Carpentry Unit</h3>
+                <h3>
+                    6000 sq.ft Warehouse & Carpentry Unit
+                </h3>
 
                 <p>
                     A dedicated warehouse and carpentry unit
@@ -749,7 +910,9 @@
 
             <div class="facility">
 
-                <h3>3000 sq.ft Modular Furniture Unit</h3>
+                <h3>
+                    3000 sq.ft Modular Furniture Unit
+                </h3>
 
                 <p>
                     An in-house modular furniture facility
@@ -761,7 +924,9 @@
 
             <div class="facility">
 
-                <h3>Import Unit</h3>
+                <h3>
+                    Import Unit
+                </h3>
 
                 <p>
                     Importing furniture, hardware, raw materials,
@@ -773,12 +938,13 @@
 
             <div class="facility">
 
-                <h3>Skilled Workforce</h3>
+                <h3>
+                    Skilled Workforce
+                </h3>
 
                 <p>
-                    A trained and competent workforce capable
-                    of supporting projects within stipulated
-                    schedules.
+                    A trained and competent workforce supporting
+                    project execution within stipulated schedules.
                 </p>
 
             </div>
@@ -788,11 +954,13 @@
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- ================= CONTACT ================= -->
 
     <section class="contact" id="contact">
 
-        <h2>Let's Work Together</h2>
+        <h2>
+            Let's Work Together
+        </h2>
 
         <p>
             Have a project in mind?
@@ -803,15 +971,17 @@
         </p>
 
         <a
-            href="mailto:YOUR-EMAIL@example.com"
+            href="#"
             class="button">
-            Send an Enquiry
+
+            Contact Us
+
         </a>
 
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
@@ -825,5 +995,7 @@
 
     </footer>
 
+
 </body>
+
 </html>
