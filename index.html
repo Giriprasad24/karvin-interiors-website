@@ -80,7 +80,7 @@
 
 
         /* =========================
-           NAVIGATION
+           DESKTOP NAVIGATION
         ========================= */
 
         nav {
@@ -109,8 +109,27 @@
         }
 
 
+        /* HAMBURGER */
+
+        .menu-button {
+            display: none;
+
+            background: none;
+
+            border: none;
+
+            font-size: 32px;
+
+            cursor: pointer;
+
+            color: #222;
+
+            padding: 5px;
+        }
+
+
         /* =========================
-           HOME / HERO
+           HOME
         ========================= */
 
         .hero {
@@ -484,11 +503,9 @@
         }
 
 
-        .contact-box h3 {
+        .contact-box h2 {
 
-            font-size: 30px;
-
-            margin-bottom: 20px;
+            white-space: nowrap;
         }
 
 
@@ -499,6 +516,14 @@
             color: #666;
 
             line-height: 1.8;
+        }
+
+
+        .contact-box h3 {
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
         }
 
 
@@ -531,6 +556,8 @@
 
             header {
                 height: 85px;
+
+                padding: 0 25px;
             }
 
 
@@ -546,13 +573,55 @@
             }
 
 
+            /* Hide normal navigation */
+
             nav {
-                gap: 18px;
+                display: none;
+
+                position: absolute;
+
+                top: 85px;
+
+                right: 0;
+
+                width: 100%;
+
+                background: white;
+
+                flex-direction: column;
+
+                align-items: center;
+
+                gap: 0;
+
+                box-shadow:
+                    0 8px 15px rgba(0, 0, 0, 0.12);
+            }
+
+
+            /* Show navigation when menu is opened */
+
+            nav.active {
+                display: flex;
             }
 
 
             nav a {
-                font-size: 14px;
+
+                width: 100%;
+
+                text-align: center;
+
+                padding: 18px 10px;
+
+                font-size: 17px;
+
+                border-bottom: 1px solid #eee;
+            }
+
+
+            .menu-button {
+                display: block;
             }
 
 
@@ -609,7 +678,7 @@
 
                 height: 75px;
 
-                padding: 0 3%;
+                padding: 0 15px;
             }
 
 
@@ -627,15 +696,23 @@
             }
 
 
+            .menu-button {
+
+                font-size: 30px;
+            }
+
+
             nav {
 
-                gap: 8px;
+                top: 75px;
             }
 
 
             nav a {
 
-                font-size: 11px;
+                font-size: 16px;
+
+                padding: 17px 10px;
             }
 
 
@@ -644,6 +721,8 @@
                 margin-top: 75px;
 
                 min-height: 600px;
+
+                padding: 0 6%;
             }
 
 
@@ -697,6 +776,12 @@
             }
 
 
+            .about-image img {
+
+                height: 350px;
+            }
+
+
             .projects-grid {
 
                 grid-template-columns: 1fr;
@@ -706,6 +791,32 @@
             .project {
 
                 height: 280px;
+            }
+
+
+            /* CONTACT TITLE - KEEP ON ONE LINE */
+
+            .contact .section-title {
+
+                font-size: 25px;
+
+                white-space: nowrap;
+
+                margin-left: -10px;
+
+                margin-right: -10px;
+            }
+
+
+            .contact-box h3 {
+
+                font-size: 24px;
+            }
+
+
+            .contact-box p {
+
+                font-size: 16px;
             }
 
         }
@@ -735,19 +846,30 @@
         </div>
 
 
-        <nav>
+        <!-- MOBILE MENU BUTTON -->
 
-            <a href="#home">Home</a>
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
 
-            <a href="#clients">Our Clients</a>
 
-            <a href="#about">About</a>
+        <nav id="mainNav">
 
-            <a href="#services">Services</a>
+            <a href="#home" onclick="closeMenu()">Home</a>
 
-            <a href="#projects">Projects</a>
+            <a href="#clients" onclick="closeMenu()">Our Clients</a>
 
-            <a href="#contact">Contact</a>
+            <a href="#about" onclick="closeMenu()">About</a>
+
+            <a href="#services" onclick="closeMenu()">Services</a>
+
+            <a href="#projects" onclick="closeMenu()">Projects</a>
+
+            <a href="#contact" onclick="closeMenu()">Contact</a>
 
         </nav>
 
@@ -1102,7 +1224,8 @@
                 <img
                     src="images/Picture13.jpg"
                     alt="Karvin Interiors Project 12"
-                </div>
+                >
+            </div>
 
 
         </div>
@@ -1158,6 +1281,33 @@
         </p>
 
     </footer>
+
+
+
+    <!-- =========================
+         MOBILE MENU SCRIPT
+    ========================= -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const nav = document.getElementById("mainNav");
+
+            nav.classList.toggle("active");
+
+        }
+
+
+        function closeMenu() {
+
+            const nav = document.getElementById("mainNav");
+
+            nav.classList.remove("active");
+
+        }
+
+    </script>
 
 
 </body>
