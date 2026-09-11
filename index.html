@@ -1698,28 +1698,75 @@
          MOBILE MENU SCRIPT
     ========================= -->
 
-    <script>
+   <script>
 
-        function toggleMenu() {
+    function toggleMenu() {
 
-            const nav =
-                document.getElementById("mainNav");
+        const nav = document.getElementById("mainNav");
 
-            nav.classList.toggle("active");
+        nav.classList.toggle("active");
 
-        }
+    }
 
 
-        function closeMenu() {
+    function closeMenu() {
 
-            const nav =
-                document.getElementById("mainNav");
+        const nav = document.getElementById("mainNav");
 
-            nav.classList.remove("active");
+        nav.classList.remove("active");
 
-        }
+    }
 
-    </script>
+
+    /* =========================================
+       SECTION NAVIGATION FIX
+
+       HOME IS NOT CHANGED.
+
+       This only controls where the page
+       stops when clicking the other nav items.
+    ========================================= */
+
+    document.querySelectorAll('#mainNav a').forEach(function(link) {
+
+        link.addEventListener('click', function(event) {
+
+            const targetId = this.getAttribute('href');
+
+            /* Leave HOME completely untouched */
+            if (!targetId || targetId === '#home') {
+                return;
+            }
+
+            const target = document.querySelector(targetId);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            const header = document.querySelector('header');
+
+            const headerHeight = header.offsetHeight;
+
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+
+            closeMenu();
+
+        });
+
+    });
+
+</script>
 
 
 </body>
