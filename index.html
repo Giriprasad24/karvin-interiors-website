@@ -14,15 +14,20 @@
 
     <style>
 
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
+
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -109,7 +114,9 @@
         }
 
 
-        /* HAMBURGER */
+        /* =========================
+           HAMBURGER
+        ========================= */
 
         .menu-button {
             display: none;
@@ -166,15 +173,19 @@
         }
 
 
+        /* CORMORANT GARAMOND */
+
         .hero h1 {
+
+            font-family: 'Cormorant Garamond', Georgia, serif;
 
             font-size: clamp(55px, 8vw, 110px);
 
             line-height: 0.95;
 
-            font-weight: 800;
+            font-weight: 700;
 
-            letter-spacing: 2px;
+            letter-spacing: 3px;
 
             margin-bottom: 35px;
         }
@@ -503,9 +514,17 @@
         }
 
 
-        .contact-box h2 {
+        .contact .section-title {
 
             white-space: nowrap;
+        }
+
+
+        .contact-box h3 {
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
         }
 
 
@@ -516,14 +535,6 @@
             color: #666;
 
             line-height: 1.8;
-        }
-
-
-        .contact-box h3 {
-
-            font-size: 30px;
-
-            margin-bottom: 20px;
         }
 
 
@@ -576,6 +587,7 @@
             /* Hide normal navigation */
 
             nav {
+
                 display: none;
 
                 position: absolute;
@@ -599,7 +611,7 @@
             }
 
 
-            /* Show navigation when menu is opened */
+            /* Show menu */
 
             nav.active {
                 display: flex;
@@ -634,7 +646,12 @@
 
 
             .hero h1 {
+
+                font-family: 'Cormorant Garamond', Georgia, serif;
+
                 font-size: 60px;
+
+                letter-spacing: 3px;
             }
 
 
@@ -698,6 +715,8 @@
 
             .menu-button {
 
+                display: block;
+
                 font-size: 30px;
             }
 
@@ -728,7 +747,11 @@
 
             .hero h1 {
 
+                font-family: 'Cormorant Garamond', Georgia, serif;
+
                 font-size: 48px;
+
+                letter-spacing: 2px;
             }
 
 
@@ -794,7 +817,7 @@
             }
 
 
-            /* CONTACT TITLE - KEEP ON ONE LINE */
+            /* CONTACT TITLE STAYS ON ONE LINE */
 
             .contact .section-title {
 
@@ -802,9 +825,9 @@
 
                 white-space: nowrap;
 
-                margin-left: -10px;
+                margin-left: -15px;
 
-                margin-right: -10px;
+                margin-right: -15px;
             }
 
 
@@ -846,7 +869,7 @@
         </div>
 
 
-        <!-- MOBILE MENU BUTTON -->
+        <!-- MOBILE MENU -->
 
         <button
             class="menu-button"
