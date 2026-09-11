@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Karvin Interiors</title>
+    <title>Karvin Interiors | Interior Design & Execution</title>
 
     <meta name="description" content="Karvin Interiors - Interior design and execution for residential and commercial spaces.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -35,15 +36,17 @@
             left: 0;
             width: 100%;
             height: 100px;
+
             background: rgba(255, 255, 255, 0.98);
+
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            /* Logo moved toward the right */
-            padding: 0 3% 0 7%;
+            padding: 0 3%;
 
             z-index: 1000;
+
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
         }
 
@@ -51,13 +54,15 @@
             display: flex;
             align-items: center;
             height: 100%;
-            margin-left: 70px;
+
+            /* Moves logo toward the right */
+            margin-left: 100px;
         }
 
         .logo {
             height: 96px;
             width: auto;
-            max-width: 420px;
+            max-width: 430px;
             object-fit: contain;
             display: block;
         }
@@ -65,7 +70,7 @@
         nav {
             display: flex;
             align-items: center;
-            gap: 42px;
+            gap: 40px;
         }
 
         nav a {
@@ -88,6 +93,7 @@
         .hero {
             height: 100vh;
             min-height: 650px;
+
             margin-top: 100px;
 
             background:
@@ -102,6 +108,7 @@
 
             display: flex;
             align-items: center;
+
             padding: 0 7%;
 
             color: white;
@@ -132,15 +139,28 @@
             margin-bottom: 35px;
         }
 
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
         .button {
             display: inline-block;
+
             padding: 17px 32px;
+
             background: #9d1626;
+
             color: white;
+
             text-decoration: none;
+
             font-size: 17px;
+
             font-weight: 600;
+
             margin-right: 15px;
+
             transition: 0.3s;
         }
 
@@ -168,8 +188,11 @@
 
         .section-title {
             text-align: center;
+
             font-size: 42px;
+
             margin-bottom: 20px;
+
             color: #222;
         }
 
@@ -179,10 +202,15 @@
 
         .section-intro {
             text-align: center;
+
             max-width: 750px;
+
             margin: 0 auto 55px;
+
             font-size: 18px;
+
             line-height: 1.7;
+
             color: #666;
         }
 
@@ -197,28 +225,39 @@
 
         .about-container {
             max-width: 1100px;
+
             margin: auto;
+
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 60px;
+
             align-items: center;
         }
 
         .about-image img {
             width: 100%;
+
             height: 500px;
+
             object-fit: cover;
         }
 
         .about-text h3 {
             font-size: 32px;
+
             margin-bottom: 20px;
         }
 
         .about-text p {
             font-size: 17px;
+
             line-height: 1.8;
+
             color: #555;
+
             margin-bottom: 20px;
         }
 
@@ -229,32 +268,43 @@
 
         .services-grid {
             max-width: 1200px;
+
             margin: auto;
+
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 25px;
         }
 
         .service-card {
             padding: 40px 30px;
+
             background: #f7f7f7;
+
             text-align: center;
+
             border-top: 4px solid #9d1626;
+
             transition: 0.3s;
         }
 
         .service-card:hover {
             transform: translateY(-7px);
+
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .service-card h3 {
             font-size: 24px;
+
             margin-bottom: 15px;
         }
 
         .service-card p {
             color: #666;
+
             line-height: 1.7;
         }
 
@@ -269,23 +319,31 @@
 
         .projects-grid {
             max-width: 1300px;
+
             margin: auto;
 
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 18px;
         }
 
         .project {
             height: 300px;
+
             overflow: hidden;
+
             background: #ddd;
         }
 
         .project img {
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
+
             transition: transform 0.5s;
         }
 
@@ -304,17 +362,21 @@
 
         .contact-box {
             max-width: 800px;
+
             margin: auto;
         }
 
         .contact-box h3 {
             font-size: 30px;
+
             margin-bottom: 20px;
         }
 
         .contact-box p {
             font-size: 18px;
+
             color: #666;
+
             line-height: 1.8;
         }
 
@@ -325,8 +387,11 @@
 
         footer {
             background: #222;
+
             color: white;
+
             text-align: center;
+
             padding: 30px 20px;
         }
 
@@ -336,27 +401,27 @@
 
 
         /* =========================
-           MOBILE
+           TABLET
         ========================= */
 
         @media (max-width: 900px) {
 
             header {
-                height: 80px;
-                padding: 0 4%;
+                height: 85px;
+                padding: 0 3%;
             }
 
             .logo-container {
-                margin-left: 0;
+                margin-left: 20px;
             }
 
             .logo {
-                height: 72px;
-                max-width: 270px;
+                height: 78px;
+                max-width: 300px;
             }
 
             nav {
-                gap: 15px;
+                gap: 18px;
             }
 
             nav a {
@@ -364,7 +429,7 @@
             }
 
             .hero {
-                margin-top: 80px;
+                margin-top: 85px;
                 padding: 0 6%;
             }
 
@@ -394,23 +459,32 @@
         }
 
 
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 600px) {
 
             header {
                 height: 75px;
+                padding: 0 3%;
+            }
+
+            .logo-container {
+                margin-left: 0;
             }
 
             .logo {
                 height: 68px;
-                max-width: 230px;
+                max-width: 220px;
             }
 
             nav {
-                gap: 10px;
+                gap: 8px;
             }
 
             nav a {
-                font-size: 12px;
+                font-size: 11px;
             }
 
             .hero {
@@ -458,6 +532,7 @@
 
 <body>
 
+
     <!-- =========================
          HEADER
     ========================== -->
@@ -465,22 +540,33 @@
     <header>
 
         <div class="logo-container">
+
+            <!-- Logo is in the main repository folder -->
             <img
-                src="images/karvin-logo.jpg"
+                src="karvin-logo.jpg"
                 alt="Karvin Interiors Logo"
                 class="logo"
             >
+
         </div>
 
+
         <nav>
+
             <a href="#home">Home</a>
+
             <a href="#about">About</a>
+
             <a href="#services">Services</a>
+
             <a href="#projects">Projects</a>
+
             <a href="#contact">Contact</a>
+
         </nav>
 
     </header>
+
 
 
     <!-- =========================
@@ -518,6 +604,7 @@
     </section>
 
 
+
     <!-- =========================
          ABOUT
     ========================== -->
@@ -533,14 +620,18 @@
             functionality, comfort and visual appeal.
         </p>
 
+
         <div class="about-container">
 
             <div class="about-image">
+
                 <img
                     src="images/Picture11.jpg"
                     alt="Karvin Interiors Project"
                 >
+
             </div>
+
 
             <div class="about-text">
 
@@ -567,6 +658,7 @@
     </section>
 
 
+
     <!-- =========================
          SERVICES
     ========================== -->
@@ -582,59 +674,98 @@
             commercial requirements.
         </p>
 
+
         <div class="services-grid">
 
+
             <div class="service-card">
-                <h3>Interior Design</h3>
+
+                <h3>
+                    Interior Design
+                </h3>
+
                 <p>
                     Thoughtful interior concepts designed to
                     suit your space, requirements and style.
                 </p>
+
             </div>
 
+
             <div class="service-card">
-                <h3>Commercial Interiors</h3>
+
+                <h3>
+                    Commercial Interiors
+                </h3>
+
                 <p>
                     Functional and professional interiors for
                     offices, commercial spaces and businesses.
                 </p>
+
             </div>
 
+
             <div class="service-card">
-                <h3>Residential Interiors</h3>
+
+                <h3>
+                    Residential Interiors
+                </h3>
+
                 <p>
                     Comfortable and elegant interiors designed
                     for modern homes and living spaces.
                 </p>
+
             </div>
 
+
             <div class="service-card">
-                <h3>Space Planning</h3>
+
+                <h3>
+                    Space Planning
+                </h3>
+
                 <p>
                     Efficient planning of spaces to improve
                     usability, movement and functionality.
                 </p>
+
             </div>
 
+
             <div class="service-card">
-                <h3>Interior Execution</h3>
+
+                <h3>
+                    Interior Execution
+                </h3>
+
                 <p>
                     Careful execution with attention to
                     workmanship, materials and finishing.
                 </p>
+
             </div>
 
+
             <div class="service-card">
-                <h3>Custom Solutions</h3>
+
+                <h3>
+                    Custom Solutions
+                </h3>
+
                 <p>
                     Interior solutions developed around the
                     specific needs of every project.
                 </p>
+
             </div>
+
 
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -651,59 +782,110 @@
             A selection of interior spaces and projects.
         </p>
 
+
         <div class="projects-grid">
 
-            <div class="project">
-                <img src="images/Picture2.jpg" alt="Karvin Interiors Project 1">
-            </div>
 
             <div class="project">
-                <img src="images/Picture3.jpg" alt="Karvin Interiors Project 2">
+                <img
+                    src="images/Picture2.jpg"
+                    alt="Karvin Interiors Project 1"
+                >
             </div>
 
-            <div class="project">
-                <img src="images/Picture4.jpg" alt="Karvin Interiors Project 3">
-            </div>
 
             <div class="project">
-                <img src="images/Picture5.jpg" alt="Karvin Interiors Project 4">
+                <img
+                    src="images/Picture3.jpg"
+                    alt="Karvin Interiors Project 2"
+                >
             </div>
 
-            <div class="project">
-                <img src="images/Picture6.jpg" alt="Karvin Interiors Project 5">
-            </div>
 
             <div class="project">
-                <img src="images/Picture7.jpg" alt="Karvin Interiors Project 6">
+                <img
+                    src="images/Picture4.jpg"
+                    alt="Karvin Interiors Project 3"
+                >
             </div>
 
-            <div class="project">
-                <img src="images/Picture8.jpg" alt="Karvin Interiors Project 7">
-            </div>
 
             <div class="project">
-                <img src="images/Picture9.jpg" alt="Karvin Interiors Project 8">
+                <img
+                    src="images/Picture5.jpg"
+                    alt="Karvin Interiors Project 4"
+                >
             </div>
 
-            <div class="project">
-                <img src="images/Picture10.jpg" alt="Karvin Interiors Project 9">
-            </div>
 
             <div class="project">
-                <img src="images/Picture11.jpg" alt="Karvin Interiors Project 10">
+                <img
+                    src="images/Picture6.jpg"
+                    alt="Karvin Interiors Project 5"
+                >
             </div>
 
-            <div class="project">
-                <img src="images/Picture12.jpg" alt="Karvin Interiors Project 11">
-            </div>
 
             <div class="project">
-                <img src="images/Picture13.jpg" alt="Karvin Interiors Project 12">
+                <img
+                    src="images/Picture7.jpg"
+                    alt="Karvin Interiors Project 6"
+                >
             </div>
+
+
+            <div class="project">
+                <img
+                    src="images/Picture8.jpg"
+                    alt="Karvin Interiors Project 7"
+                >
+            </div>
+
+
+            <div class="project">
+                <img
+                    src="images/Picture9.jpg"
+                    alt="Karvin Interiors Project 8"
+                >
+            </div>
+
+
+            <div class="project">
+                <img
+                    src="images/Picture10.jpg"
+                    alt="Karvin Interiors Project 9"
+                >
+            </div>
+
+
+            <div class="project">
+                <img
+                    src="images/Picture11.jpg"
+                    alt="Karvin Interiors Project 10"
+                >
+            </div>
+
+
+            <div class="project">
+                <img
+                    src="images/Picture12.jpg"
+                    alt="Karvin Interiors Project 11"
+                >
+            </div>
+
+
+            <div class="project">
+                <img
+                    src="images/Picture13.jpg"
+                    alt="Karvin Interiors Project 12"
+                >
+            </div>
+
 
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -715,6 +897,7 @@
         <h2 class="section-title">
             Contact <span>Karvin Interiors</span>
         </h2>
+
 
         <div class="contact-box">
 
@@ -728,13 +911,14 @@
 
             <br>
 
-            <a href="mailto:" class="button">
-                Email Us
+            <a href="#contact" class="button">
+                Contact Us
             </a>
 
         </div>
 
     </section>
+
 
 
     <!-- =========================
@@ -748,6 +932,7 @@
         </p>
 
     </footer>
+
 
 </body>
 </html>
