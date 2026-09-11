@@ -1,1657 +1,908 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Karvin Interiors | Interior Design & Execution</title>
-
-    <meta name="description"
-        content="Karvin Interiors - Interior design and execution for residential and commercial spaces.">
-
-    <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
-
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #222;
-            background: #fff;
-        }
-
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-
-            width: 100%;
-            height: 100px;
-
-            background: rgba(255, 255, 255, 0.98);
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 0 3%;
-
-            z-index: 1000;
-
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-        }
-
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-
-            height: 100%;
-
-            margin-left: 100px;
-        }
-
-
-        .logo {
-            height: 96px;
-            width: auto;
-
-            max-width: 430px;
-
-            object-fit: contain;
-
-            display: block;
-        }
-
-
-        /* =========================
-           DESKTOP NAVIGATION
-        ========================= */
-
-        nav {
-            display: flex;
-            align-items: center;
-
-            gap: 40px;
-        }
-
-
-        nav a {
-            text-decoration: none;
-
-            color: #222;
-
-            font-size: 18px;
-
-            font-weight: 600;
-
-            transition: 0.3s;
-        }
-
-
-        nav a:hover {
-            color: #9d1626;
-        }
-
-
-        /* =========================
-           MOBILE MENU BUTTON
-        ========================= */
-
-        .menu-button {
-            display: none;
-
-            background: none;
-
-            border: none;
-
-            font-size: 32px;
-
-            cursor: pointer;
-
-            color: #222;
-
-            padding: 5px;
-        }
-
-
-        /* =========================
-           HOME
-        ========================= */
-
-        .hero {
-
-            height: 100vh;
-
-            min-height: 650px;
-
-            margin-top: 100px;
-
-            background:
-                linear-gradient(
-                    rgba(0, 0, 0, 0.55),
-                    rgba(0, 0, 0, 0.55)
-                ),
-                url("images/Picture10.jpg");
-
-            background-size: cover;
-
-            background-position: center;
-
-            display: flex;
-
-            align-items: center;
-
-            padding: 0 7%;
-
-            color: white;
-        }
-
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-
-        .hero h1 {
-
-            font-family: 'Cormorant Garamond', Georgia, serif;
-
-            font-size: clamp(55px, 8vw, 110px);
-
-            line-height: 0.95;
-
-            font-weight: 700;
-
-            letter-spacing: 3px;
-
-            margin-bottom: 35px;
-        }
-
-
-        .hero h2 {
-
-            font-size: 32px;
-
-            font-weight: 400;
-
-            margin-bottom: 25px;
-        }
-
-
-        .hero p {
-
-            font-size: 21px;
-
-            line-height: 1.6;
-
-            max-width: 750px;
-
-            margin-bottom: 35px;
-        }
-
-
-        /* =========================
-           BUTTONS
-        ========================= */
-
-        .button {
-
-            display: inline-block;
-
-            padding: 17px 32px;
-
-            background: #9d1626;
-
-            color: white;
-
-            text-decoration: none;
-
-            font-size: 17px;
-
-            font-weight: 600;
-
-            margin-right: 15px;
-
-            transition: 0.3s;
-        }
-
-
-        .button:hover {
-            background: #74101d;
-        }
-
-
-        .button-light {
-
-            background: white;
-
-            color: #222;
-        }
-
-
-        .button-light:hover {
-            background: #eee;
-        }
-
-
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
-
-        section {
-
-            padding: 70px 7%;
-
-            scroll-margin-top: 100px;
-        }
-
-
-        .section-title {
-
-            text-align: center;
-
-            font-size: 42px;
-
-            margin-bottom: 25px;
-
-            color: #222;
-        }
-
-
-        .section-title span {
-            color: #9d1626;
-        }
-
-
-        .section-intro {
-
-            text-align: center;
-
-            max-width: 750px;
-
-            margin: 0 auto 55px;
-
-            font-size: 18px;
-
-            line-height: 1.7;
-
-            color: #666;
-        }
-
-
-        /* =========================
-           OUR CLIENTS
-        ========================= */
-
-        .clients {
-
-            background: #fff;
-
-            text-align: center;
-
-            padding: 70px 4%;
-        }
-
-
-        .clients-image {
-
-            max-width: 1500px;
-
-            margin: 0 auto;
-        }
-
-
-        .clients-image img {
-
-            width: 100%;
-
-            height: auto;
-
-            display: block;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-
-            background: #f7f7f7;
-
-            padding-top: 55px;
-        }
-
-
-        /*
-           COMPANY INTRODUCTION
-           These paragraphs appear directly
-           below the About heading.
-        */
-
-        .about-intro {
-
-            max-width: 1200px;
-
-            margin: 0 auto 50px;
-
-            text-align: left;
-        }
-
-
-        .about-intro p {
-
-            font-size: 18px;
-
-            line-height: 1.8;
-
-            color: #555;
-
-            margin-bottom: 20px;
-        }
-
-
-        .about-intro p:last-child {
-
-            margin-bottom: 0;
-        }
-
-
-        /*
-           IMAGE + RIGHT-SIDE CONTENT
-        */
-
-        .about-container {
-
-            max-width: 1200px;
-
-            margin: 0 auto;
-
-            display: grid;
-
-            grid-template-columns: 0.9fr 1.1fr;
-
-            gap: 55px;
-
-            align-items: center;
-        }
-
-
-        /*
-           SMALLER ABOUT IMAGE
-        */
-
-        .about-image {
-
-            width: 100%;
-        }
-
-
-        .about-image img {
-
-            width: 100%;
-
-            height: 380px;
-
-            object-fit: cover;
-
-            display: block;
-        }
-
-
-        .about-text {
-
-            padding: 10px 0;
-        }
-
-
-        .about-text h3 {
-
-            font-size: 34px;
-
-            margin-bottom: 22px;
-
-            color: #222;
-        }
-
-
-        .about-text p {
-
-            font-size: 18px;
-
-            line-height: 1.8;
-
-            color: #555;
-
-            margin-bottom: 22px;
-        }
-
-
-        /* =========================
-           SERVICES
-        ========================= */
-
-        .services-grid {
-
-            max-width: 1200px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-
-        .service-card {
-
-            padding: 40px 30px;
-
-            background: #f7f7f7;
-
-            text-align: center;
-
-            border-top: 4px solid #9d1626;
-
-            transition: 0.3s;
-        }
-
-
-        .service-card:hover {
-
-            transform: translateY(-7px);
-
-            box-shadow:
-                0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-
-        .service-card h3 {
-
-            font-size: 24px;
-
-            margin-bottom: 15px;
-        }
-
-
-        .service-card p {
-
-            color: #666;
-
-            line-height: 1.7;
-        }
-
-
-        /* =========================
-           PROJECTS
-        ========================= */
-
-        .projects {
-
-            background: #f7f7f7;
-        }
-
-
-        .projects-grid {
-
-            max-width: 1300px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .project {
-
-            height: 300px;
-
-            overflow: hidden;
-
-            background: #ddd;
-        }
-
-
-        .project img {
-
-            width: 100%;
-
-            height: 100%;
-
-            object-fit: cover;
-
-            transition: transform 0.5s;
-        }
-
-
-        .project:hover img {
-
-            transform: scale(1.08);
-        }
-
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-
-            text-align: center;
-        }
-
-
-        .contact-box {
-
-            max-width: 800px;
-
-            margin: auto;
-        }
-
-
-        .contact-box h2 {
-
-            white-space: nowrap;
-        }
-
-
-        .contact-box h3 {
-
-            font-size: 30px;
-
-            margin-bottom: 20px;
-        }
-
-
-        .contact-box p {
-
-            font-size: 18px;
-
-            color: #666;
-
-            line-height: 1.8;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-
-            background: #222;
-
-            color: white;
-
-            text-align: center;
-
-            padding: 30px 20px;
-        }
-
-
-        footer p {
-            color: #bbb;
-        }
-
-
-        /* =========================
-           TABLET
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            header {
-
-                height: 85px;
-
-                padding: 0 25px;
-            }
-
-
-            .logo-container {
-
-                margin-left: 20px;
-            }
-
-
-            .logo {
-
-                height: 78px;
-
-                max-width: 300px;
-            }
-
-
-            /* Hide normal navigation */
-
-            nav {
-
-                display: none;
-
-                position: absolute;
-
-                top: 85px;
-
-                right: 0;
-
-                width: 100%;
-
-                background: white;
-
-                flex-direction: column;
-
-                align-items: center;
-
-                gap: 0;
-
-                box-shadow:
-                    0 8px 15px rgba(0, 0, 0, 0.12);
-            }
-
-
-            nav.active {
-                display: flex;
-            }
-
-
-            nav a {
-
-                width: 100%;
-
-                text-align: center;
-
-                padding: 18px 10px;
-
-                font-size: 17px;
-
-                border-bottom: 1px solid #eee;
-            }
-
-
-            .menu-button {
-                display: block;
-            }
-
-
-            .hero {
-
-                margin-top: 85px;
-
-                padding: 0 6%;
-            }
-
-
-            .hero h1 {
-
-                font-size: 60px;
-            }
-
-
-            .hero h2 {
-
-                font-size: 25px;
-            }
-
-
-            .hero p {
-
-                font-size: 17px;
-            }
-
-
-            .about-container {
-
-                grid-template-columns: 1fr 1fr;
-
-                gap: 35px;
-            }
-
-
-            .about-image img {
-
-                height: 330px;
-            }
-
-
-            .about-text h3 {
-
-                font-size: 29px;
-            }
-
-
-            .about-text p {
-
-                font-size: 16px;
-            }
-
-
-            .services-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .projects-grid {
-
-                grid-template-columns: 1fr 1fr;
-            }
-
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 600px) {
-
-            header {
-
-                height: 75px;
-
-                padding: 0 15px;
-            }
-
-
-            .logo-container {
-
-                margin-left: 0;
-            }
-
-
-            .logo {
-
-                height: 68px;
-
-                max-width: 220px;
-            }
-
-
-            .menu-button {
-
-                font-size: 30px;
-            }
-
-
-            nav {
-
-                top: 75px;
-            }
-
-
-            nav a {
-
-                font-size: 16px;
-
-                padding: 17px 10px;
-            }
-
-
-            .hero {
-
-                margin-top: 75px;
-
-                min-height: 600px;
-
-                padding: 0 6%;
-            }
-
-
-            .hero h1 {
-
-                font-family: 'Cormorant Garamond', Georgia, serif;
-
-                font-size: 48px;
-
-                letter-spacing: 2px;
-            }
-
-
-            .hero h2 {
-
-                font-size: 22px;
-            }
-
-
-            .hero p {
-
-                font-size: 16px;
-            }
-
-
-            .button {
-
-                padding: 13px 20px;
-
-                font-size: 14px;
-            }
-
-
-            section {
-
-                padding: 55px 6%;
-
-                scroll-margin-top: 75px;
-            }
-
-
-            .section-title {
-
-                font-size: 32px;
-
-                margin-bottom: 20px;
-            }
-
-
-            /* CLIENTS */
-
-            .clients {
-
-                padding: 55px 3%;
-            }
-
-
-            .clients-image img {
-
-                width: 100%;
-            }
-
-
-            /* ABOUT */
-
-            .about {
-
-                padding-top: 45px;
-            }
-
-
-            .about-intro {
-
-                margin-bottom: 35px;
-
-                text-align: left;
-            }
-
-
-            .about-intro p {
-
-                font-size: 16px;
-
-                line-height: 1.7;
-
-                margin-bottom: 18px;
-            }
-
-
-            /*
-               On mobile the image and text
-               naturally stack one below another.
-            */
-
-            .about-container {
-
-                grid-template-columns: 1fr;
-
-                gap: 30px;
-            }
-
-
-            /*
-               Smaller image on mobile.
-            */
-
-            .about-image img {
-
-                height: 280px;
-
-                width: 100%;
-
-                object-fit: cover;
-            }
-
-
-            .about-text {
-
-                padding: 0;
-            }
-
-
-            .about-text h3 {
-
-                font-size: 27px;
-
-                margin-bottom: 18px;
-            }
-
-
-            .about-text p {
-
-                font-size: 16px;
-
-                line-height: 1.7;
-            }
-
-
-            /* PROJECTS */
-
-            .projects-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .project {
-
-                height: 280px;
-            }
-
-
-            /* CONTACT TITLE */
-
-            .contact .section-title {
-
-                font-size: 25px;
-
-                white-space: nowrap;
-
-                margin-left: -10px;
-
-                margin-right: -10px;
-            }
-
-
-            .contact-box h3 {
-
-                font-size: 24px;
-            }
-
-
-            .contact-box p {
-
-                font-size: 16px;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Karvin Interiors</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 140px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    height: 140px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 410px;
+    height: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 27px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #a6192e;
+}
+
+/* =========================
+   HOME / HERO
+========================= */
+
+#home {
+    height: calc(100vh - 140px);
+    min-height: 650px;
+    position: relative;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("images/Picture2.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 30px 70px 40px;
+    color: white;
+}
+
+.hero-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(75px, 7vw, 145px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: 4px;
+    max-width: 900px;
+    margin-bottom: 55px;
+}
+
+.hero-subtitle {
+    font-size: clamp(28px, 2.5vw, 48px);
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.hero-description {
+    font-size: clamp(18px, 1.4vw, 27px);
+    line-height: 1.7;
+    max-width: 1050px;
+    margin-bottom: 45px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 28px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 255px;
+    padding: 20px 35px;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.primary-button {
+    background: #a6192e;
+    color: #fff;
+}
+
+.primary-button:hover {
+    background: #871323;
+}
+
+.secondary-button {
+    background: #fff;
+    color: #222;
+}
+
+.secondary-button:hover {
+    background: #eee;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    scroll-margin-top: 140px;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: clamp(42px, 4vw, 68px);
+    line-height: 1.2;
+    margin-bottom: 35px;
+}
+
+.red {
+    color: #a6192e;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 25px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* =========================
+   OUR CLIENTS
+========================= */
+
+#clients {
+    padding: 70px 40px 80px;
+    background: #fff;
+}
+
+.clients-image {
+    display: block;
+    width: 100%;
+    max-width: 1500px;
+    height: auto;
+    margin: 55px auto 0;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+#about {
+    padding: 70px 40px 100px;
+    background: #f8f8f8;
+}
+
+.about-intro {
+    max-width: 1500px;
+    margin: 0 auto 65px;
+}
+
+.about-intro p {
+    font-size: 24px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 28px;
+}
+
+.about-content {
+    max-width: 1500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.about-text h3 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 35px;
+}
+
+.about-text p {
+    font-size: 24px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+#services {
+    padding: 90px 40px;
+    background: #fff;
+}
+
+.services-grid {
+    max-width: 1400px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    padding: 40px 30px;
+    border: 1px solid #ddd;
+    background: #fff;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+    font-size: 28px;
+    margin-bottom: 18px;
+    color: #a6192e;
+}
+
+.service-card p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+#projects {
+    padding: 90px 40px;
+    background: #f8f8f8;
+}
+
+.projects-grid {
+    max-width: 1400px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    overflow: hidden;
+    background: #fff;
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.04);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    padding: 90px 40px;
+    background: #fff;
+}
+
+.contact-box {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+.contact-box h3 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.contact-box p {
+    font-size: 21px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.contact-details {
+    margin-top: 35px;
+    font-size: 20px;
+    line-height: 2;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 16px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    html {
+        scroll-padding-top: 90px;
+    }
+
+    header {
+        height: 90px;
+    }
+
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .logo img {
+        width: 230px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    section {
+        scroll-margin-top: 90px;
+    }
+
+    /* HOME */
+
+    #home {
+        height: calc(100vh - 90px);
+        min-height: 600px;
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 30px 25px;
+    }
+
+    .hero-title {
+        font-size: clamp(52px, 13vw, 85px);
+        line-height: 1;
+        letter-spacing: 2px;
+        margin-bottom: 35px;
+    }
+
+    .hero-subtitle {
+        font-size: 27px;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .hero-button {
+        min-width: 0;
+        padding: 15px 18px;
+        font-size: 16px;
+        flex: 1;
+    }
+
+    /* CLIENTS */
+
+    #clients {
+        padding: 50px 20px;
+    }
+
+    .section-heading {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .section-subtitle {
+        font-size: 18px;
+    }
+
+    .clients-image {
+        margin-top: 30px;
+    }
+
+    /* ABOUT */
+
+    #about {
+        padding: 50px 20px 70px;
+    }
+
+    .about-intro {
+        margin-bottom: 45px;
+    }
+
+    .about-intro p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 22px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        order: 1;
+    }
+
+    .about-text {
+        order: 2;
+    }
+
+    .about-text h3 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    /* SERVICES */
+
+    #services,
+    #projects,
+    #contact {
+        padding: 60px 20px;
+    }
+
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+        margin-top: 35px;
+    }
+
+    .service-card {
+        padding: 30px 25px;
+    }
+
+    /* CONTACT */
+
+    .contact-box h3 {
+        font-size: 30px;
+        white-space: nowrap;
+    }
+
+    .contact-box p {
+        font-size: 18px;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        height: 75px;
+    }
+
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    section {
+        scroll-margin-top: 75px;
+    }
+
+    .nav-container {
+        padding: 0 12px;
+    }
+
+    .logo img {
+        width: 175px;
+    }
+
+    nav {
+        gap: 9px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    #home {
+        height: calc(100vh - 75px);
+        min-height: 560px;
+    }
+
+    .hero-content {
+        padding: 20px 18px 30px;
+    }
+
+    .hero-title {
+        font-size: 53px;
+        line-height: 0.98;
+        margin-bottom: 30px;
+    }
+
+    .hero-subtitle {
+        font-size: 23px;
+        margin-bottom: 18px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.45;
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .hero-button {
+        padding: 14px 10px;
+        font-size: 14px;
+    }
+
+    .section-heading {
+        font-size: 34px;
+    }
+
+    .contact-box h3 {
+        font-size: 25px;
+        white-space: nowrap;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+<header>
+    <div class="nav-container">
 
-    <header>
+        <a href="#home" class="logo">
+            <img src="karvin-logo.jpg" alt="Karvin Interiors Logo">
+        </a>
 
-        <div class="logo-container">
-
-            <img
-                src="karvin-logo.jpg"
-                alt="Karvin Interiors Logo"
-                class="logo"
-            >
-
-        </div>
-
-
-        <!-- MOBILE MENU -->
-
-        <button
-            class="menu-button"
-            onclick="toggleMenu()"
-            aria-label="Open navigation menu"
-        >
-            ☰
-        </button>
-
-
-        <nav id="mainNav">
-
-            <a
-                href="#home"
-                onclick="closeMenu()"
-            >
-                Home
-            </a>
-
-
-            <a
-                href="#clients"
-                onclick="closeMenu()"
-            >
-                Our Clients
-            </a>
-
-
-            <a
-                href="#about"
-                onclick="closeMenu()"
-            >
-                About
-            </a>
-
-
-            <a
-                href="#services"
-                onclick="closeMenu()"
-            >
-                Services
-            </a>
-
-
-            <a
-                href="#projects"
-                onclick="closeMenu()"
-            >
-                Projects
-            </a>
-
-
-            <a
-                href="#contact"
-                onclick="closeMenu()"
-            >
-                Contact
-            </a>
-
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#clients">Our Clients</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
 
-    </header>
+    </div>
+</header>
 
 
+<!-- =========================
+     HOME
+========================= -->
 
-    <!-- =========================
-         HOME
-    ========================= -->
+<section id="home">
 
-    <section
-        class="hero"
-        id="home"
-    >
+    <div class="hero-content">
 
-        <div class="hero-content">
+        <h1 class="hero-title">
+            KARVIN<br>
+            INTERIORS
+        </h1>
 
-            <h1>
-                KARVIN<br>
-                INTERIORS
-            </h1>
+        <div class="hero-subtitle">
+            Creating spaces with purpose.
+        </div>
 
+        <div class="hero-description">
+            Interior design and execution for professional, commercial and residential environments.
+        </div>
 
-            <h2>
-                Creating spaces with purpose.
-            </h2>
-
-
-            <p>
-                Interior design and execution for professional,
-                commercial and residential environments.
-            </p>
-
-
-            <a
-                href="#projects"
-                class="button"
-            >
+        <div class="hero-buttons">
+            <a href="#projects" class="hero-button primary-button">
                 View Projects
             </a>
 
-
-            <a
-                href="#contact"
-                class="button button-light"
-            >
+            <a href="#contact" class="hero-button secondary-button">
                 Contact Us
             </a>
-
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
+<!-- =========================
+     OUR CLIENTS
+========================= -->
 
-    <!-- =========================
-         OUR CLIENTS
-    ========================= -->
+<section id="clients">
 
-    <section
-        class="clients"
-        id="clients"
+    <h2 class="section-heading">
+        Our <span class="red">Clients</span>
+    </h2>
+
+    <p class="section-subtitle">
+        Trusted by leading organizations and businesses.
+    </p>
+
+    <img
+        src="images/clients.jpg"
+        alt="Our Clients"
+        class="clients-image"
     >
 
-        <h2 class="section-title">
+</section>
 
-            Our <span>Clients</span>
 
-        </h2>
+<!-- =========================
+     ABOUT
+========================= -->
 
+<section id="about">
 
-        <p class="section-intro">
+    <h2 class="section-heading">
+        About <span class="red">Karvin Interiors</span>
+    </h2>
 
-            Trusted by leading organizations and businesses.
-
-        </p>
-
-
-        <div class="clients-image">
-
-            <img
-                src="our-clients.png"
-                alt="Our Clients - Karvin Interiors"
-            >
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
-    <section
-        class="about"
-        id="about"
-    >
-
-        <h2 class="section-title">
-
-            About <span>Karvin Interiors</span>
-
-        </h2>
-
-
-
-        <!-- COMPANY DESCRIPTION -->
-
-        <div class="about-intro">
-
-
-            <p>
-
-                The insightful vision of our leader, Mr. K. Prasanna,
-                the dedication of our highly professional top management,
-                our team of talented in-house architects/associates,
-                engineers, managers and most importantly the skills of
-                our motivated workforce, have played important roles in
-                driving our growth since 1985.
-
-            </p>
-
-
-            <p>
-
-                We have executed interior contracts of sizeable magnitude
-                varying from 2000 to 1.60 lakh sq. ft, adhering to high
-                quality standards &amp; time schedules.
-
-            </p>
-
-
-            <p>
-
-                Over the years, we have gained rich experience by
-                executing contracts in various fields – luxury hotels,
-                IT parks, corporate offices, banks, hospitals, retail,
-                residences.
-
-            </p>
-
-
-        </div>
-
-
-
-        <!-- IMAGE + RIGHT CONTENT -->
-
-        <div class="about-container">
-
-
-            <div class="about-image">
-
-                <img
-                    src="images/Picture11.jpg"
-                    alt="Karvin Interiors Project"
-                >
-
-            </div>
-
-
-
-            <div class="about-text">
-
-                <h3>
-
-                    Spaces designed around you.
-
-                </h3>
-
-
-                <p>
-
-                    Karvin Interiors focuses on creating interiors
-                    that are practical, elegant and built around
-                    the requirements of each space.
-
-                </p>
-
-
-                <p>
-
-                    From initial concepts to execution, we aim to
-                    deliver quality interiors with attention to
-                    detail and functionality.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         SERVICES
-    ========================= -->
-
-    <section
-        id="services"
-    >
-
-        <h2 class="section-title">
-
-            Our <span>Services</span>
-
-        </h2>
-
-
-        <p class="section-intro">
-
-            Interior solutions tailored to residential and
-            commercial requirements.
-
-        </p>
-
-
-        <div class="services-grid">
-
-
-            <div class="service-card">
-
-                <h3>
-                    Interior Design
-                </h3>
-
-                <p>
-                    Thoughtful interior concepts designed to
-                    suit your space, requirements and style.
-                </p>
-
-            </div>
-
-
-
-            <div class="service-card">
-
-                <h3>
-                    Commercial Interiors
-                </h3>
-
-                <p>
-                    Functional and professional interiors for
-                    offices, commercial spaces and businesses.
-                </p>
-
-            </div>
-
-
-
-            <div class="service-card">
-
-                <h3>
-                    Residential Interiors
-                </h3>
-
-                <p>
-                    Comfortable and elegant interiors designed
-                    for modern homes and living spaces.
-                </p>
-
-            </div>
-
-
-
-            <div class="service-card">
-
-                <h3>
-                    Space Planning
-                </h3>
-
-                <p>
-                    Efficient planning of spaces to improve
-                    usability, movement and functionality.
-                </p>
-
-            </div>
-
-
-
-            <div class="service-card">
-
-                <h3>
-                    Interior Execution
-                </h3>
-
-                <p>
-                    Careful execution with attention to
-                    workmanship, materials and finishing.
-                </p>
-
-            </div>
-
-
-
-            <div class="service-card">
-
-                <h3>
-                    Custom Solutions
-                </h3>
-
-                <p>
-                    Interior solutions developed around the
-                    specific needs of every project.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         PROJECTS
-    ========================= -->
-
-    <section
-        class="projects"
-        id="projects"
-    >
-
-        <h2 class="section-title">
-
-            Our <span>Projects</span>
-
-        </h2>
-
-
-        <p class="section-intro">
-
-            A selection of interior spaces and projects.
-
-        </p>
-
-
-        <div class="projects-grid">
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture2.jpg"
-                    alt="Karvin Interiors Project 1"
-                >
-
-            </div>
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture3.jpg"
-                    alt="Karvin Interiors Project 2"
-                >
-
-            </div>
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture4.jpg"
-                    alt="Karvin Interiors Project 3"
-                >
-
-            </div>
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture5.jpg"
-                    alt="Karvin Interiors Project 4"
-                >
-
-            </div>
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture6.jpg"
-                    alt="Karvin Interiors Project 5"
-                >
-
-            </div>
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture7.jpg"
-                    alt="Karvin Interiors Project 6"
-                >
-
-            </div>
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture8.jpg"
-                    alt="Karvin Interiors Project 7"
-                >
-
-            </div>
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture9.jpg"
-                    alt="Karvin Interiors Project 8"
-                >
-
-            </div>
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture10.jpg"
-                    alt="Karvin Interiors Project 9"
-                >
-
-            </div>
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture11.jpg"
-                    alt="Karvin Interiors Project 10"
-                >
-
-            </div>
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture12.jpg"
-                    alt="Karvin Interiors Project 11"
-                >
-
-            </div>
-
-
-            <div class="project">
-
-                <img
-                    src="images/Picture13.jpg"
-                    alt="Karvin Interiors Project 12"
-                >
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section
-        class="contact"
-        id="contact"
-    >
-
-        <h2 class="section-title">
-
-            Contact <span>Karvin Interiors</span>
-
-        </h2>
-
-
-        <div class="contact-box">
-
-
-            <h3>
-
-                Let's create your space.
-
-            </h3>
-
-
-            <p>
-
-                Phone, email and address details can be added here.
-
-            </p>
-
-
-            <br>
-
-
-            <a
-                href="#contact"
-                class="button"
-            >
-
-                Contact Us
-
-            </a>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
+    <div class="about-intro">
 
         <p>
-
-            © 2026 Karvin Interiors. All Rights Reserved.
-
+            The insightful vision of our leader, Mr. K. Prasanna, the dedication of our highly professional top management, our team of talented in-house architects/associates, engineers, managers and most importantly the skills of our motivated workforce, have played important roles in driving our growth since 1985.
         </p>
 
-    </footer>
+        <p>
+            We have executed interior contracts of sizeable magnitude varying from 2000 to 1.60 lakh sq. ft, adhering to high quality standards &amp; time schedules.
+        </p>
+
+        <p>
+            Over the years, we have gained rich experience by executing contracts in various fields – luxury hotels, IT parks, corporate offices, banks, hospitals, retail, residences.
+        </p>
+
+    </div>
 
 
+    <div class="about-content">
 
-    <!-- =========================
-         MOBILE MENU SCRIPT
-    ========================= -->
+        <div class="about-image">
+            <img src="images/Picture3.jpg" alt="Karvin Interiors Project">
+        </div>
 
-    <script>
+        <div class="about-text">
 
-        function toggleMenu() {
+            <h3>
+                Spaces designed around you.
+            </h3>
 
-            const nav =
-                document.getElementById("mainNav");
+            <p>
+                Karvin Interiors focuses on creating interiors that are practical, elegant and built around the requirements of each space.
+            </p>
 
-            nav.classList.toggle("active");
+            <p>
+                From initial concepts to execution, we aim to deliver quality interiors with attention to detail and functionality.
+            </p>
 
-        }
+        </div>
+
+    </div>
+
+</section>
 
 
-        function closeMenu() {
+<!-- =========================
+     SERVICES
+========================= -->
 
-            const nav =
-                document.getElementById("mainNav");
+<section id="services">
 
-            nav.classList.remove("active");
+    <h2 class="section-heading">
+        Our <span class="red">Services</span>
+    </h2>
 
-        }
+    <p class="section-subtitle">
+        Thoughtful design and professional execution.
+    </p>
 
-    </script>
+    <div class="services-grid">
 
+        <div class="service-card">
+            <h3>Interior Design</h3>
+            <p>
+                Creative and functional interior concepts designed around the requirements of each space.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Commercial Interiors</h3>
+            <p>
+                Professional interior solutions for offices, IT parks, corporate spaces and commercial environments.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Residential Interiors</h3>
+            <p>
+                Elegant and practical interiors designed to create comfortable residential environments.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Hotel Interiors</h3>
+            <p>
+                Interior execution for hospitality spaces with attention to quality, detail and schedules.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Execution</h3>
+            <p>
+                Professional project execution with a focus on workmanship, quality and timely completion.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Project Management</h3>
+            <p>
+                Coordinated project management to ensure smooth execution from concept through completion.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <h2 class="section-heading">
+        Our <span class="red">Projects</span>
+    </h2>
+
+    <p class="section-subtitle">
+        A selection of spaces executed by Karvin Interiors.
+    </p>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <img src="images/Picture4.jpg" alt="Karvin Interiors Project">
+        </div>
+
+        <div class="project-card">
+            <img src="images/Picture5.jpg" alt="Karvin Interiors Project">
+        </div>
+
+        <div class="project-card">
+            <img src="images/Picture6.jpg" alt="Karvin Interiors Project">
+        </div>
+
+        <div class="project-card">
+            <img src="images/Picture7.jpg" alt="Karvin Interiors Project">
+        </div>
+
+        <div class="project-card">
+            <img src="images/Picture8.jpg" alt="Karvin Interiors Project">
+        </div>
+
+        <div class="project-card">
+            <img src="images/Picture9.jpg" alt="Karvin Interiors Project">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <h2 class="section-heading">
+        Contact <span class="red">Karvin Interiors</span>
+    </h2>
+
+    <div class="contact-box">
+
+        <h3>
+            Let's create something exceptional.
+        </h3>
+
+        <p>
+            Get in touch with Karvin Interiors to discuss your interior design and execution requirements.
+        </p>
+
+        <div class="contact-details">
+            Phone: Coming Soon<br>
+            Email: Coming Soon<br>
+            Address: Coming Soon
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+    © 2026 Karvin Interiors. All Rights Reserved.
+</footer>
 
 </body>
-
 </html>
